@@ -1,0 +1,172 @@
+% generate the synthetic dataset
+clear;
+clc;
+expn = [0.95,1.01,0.99,1.05,0.9,1.1,0.95,1.05];% expn is the parameter for Zipf's law
+% %% parameters set
+% %% Syn_a1
+% % Syn_a1_0.005
+% N = [10,5,5,10];T = 4;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+%Syn_a1_0.01
+% N = [10,5,5,10];T = 4;K = 2;D=0.01;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% Syn_a1_0.05
+% N = [10,5,5,10];T = 4;K = 2;D=0.05;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a1_0.1
+% N = [10,5,5,10];T = 4;K = 2;D=0.1;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% 
+% %% Syn_a2
+%Syn_a2_0.005
+% N = [50,10,10,50];T = 4;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+%Syn_a2_0.01
+% N = [50,10,10,50];T = 4;K = 2;D=0.01;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a2_0.05
+% N = [50,10,10,50];T = 4;K = 2;D=0.05;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a2_0.1
+% N = [50,10,10,50];T = 4;K = 2;D=0.1;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% 
+% %% Syn_a3
+% %Syn_a3_0.005
+% N = [50,10,50,100];T = 4;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a3_0.01
+% N = [50,10,50,100];T = 4;K = 2;D=0.01;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a3_0.05
+% N = [50,10,50,100];T = 4;K = 2;D=0.05;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a3_0.1
+% N = [50,10,50,100];T = 4;K = 2;D=0.1;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% 
+% %% Syn_a4
+% %Syn_a4_0.005
+% N = [100,50,50,100];T = 4;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a4_0.01
+% N = [100,50,50,100];T = 4;K = 2;D=0.01;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a4_0.05
+% N = [100,50,50,100];T = 4;K = 2;D=0.05;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %Syn_a4_0.1
+% N = [100,50,50,100];T = 4;K = 2;D=0.1;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+
+
+
+% %% Syn_b1
+% % Syn_b1_T2O1
+% N = [5000,1000];T = 2;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% %% Syn_b1
+% % Syn_b1_T2O0
+% N = [5000,1000];T = 2;K = 2;D=0.005;O=0;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+
+% %% Syn_b2
+% % Syn_b2_T4O1
+% N = [50,10,100,100];T = 4;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% % Syn_b2_T4O0
+% N = [50,10,100,100];T = 4;K = 2;D=0.005;O=0;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+
+% %% Syn_b3
+% % Syn_b3_T6O1
+% N = [50,10,10,10,10,10];T = 6;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% % Syn_b3_T6O0
+% N = [50,10,10,10,10,10];T = 6;K = 2;D=0.005;O=0;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+
+% %% Syn_b4
+% % Syn_b4_T8O1
+% N = [5,4,5,5,10,10,10,10];T = 8;K = 2;D=0.005;O=1;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+% % Syn_b4_T8O0
+% N = [5,4,5,5,10,10,10,10];T = 8;K = 2;D=0.005;O=0;
+% [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O );
+
+
+%%  generate data
+for t= 1:T
+    for i=1:Tensor_size(t)
+        tem = Tensor_size(t)/2;
+        if i<=tem
+            U_groundtruth{1,t}(i,:)=[1,0];
+        else
+            U_groundtruth{1,t}(i,:)=[0,1];
+        end
+    end
+    % overlap
+    if O == 1
+        Tensor_subs(1:ceil(0.4*J),t)=zipf_rand(floor(Tensor_size(t)/2),expn(t),ceil(0.4*J));
+        Tensor_subs(ceil(0.4*J)+1:ceil(0.8*J),t)=zipf_rand(floor(Tensor_size(t)/2),expn(t),floor(0.4*J))+ceil(Tensor_size(t)/2);
+        Tensor_subs(ceil(0.8*J)+1:J,t)=zipf_rand(Tensor_size(t),expn(t),floor(0.2*J));
+    else
+    % no overlap
+        Tensor_subs(1:ceil(0.5*J),t)=zipf_rand(floor(Tensor_size(t)/2),expn(t),ceil(0.5*J));
+        Tensor_subs(ceil(0.5*J)+1:J,t)=zipf_rand(floor(Tensor_size(t)/2),expn(t),floor(0.5*J))+ceil(Tensor_size(t)/2);
+    end
+end
+
+%% save data
+save('synthetic_data.mat','T','K','Tensor_size','Tensor_subs','Tensor_vals','U_groundtruth');
+
+function x = zipf_rand(N, expn, M)
+	% Generate random numbers based on Zipf distribution
+	% Reference: https://en.wikipedia.org/wiki/Zipf's_law
+	%
+	% N         Number of Elements
+	% expn      Exponent
+	% M         Number of sample to be generated
+	if nargin == 2
+		M = 1;
+	end
+
+	ranks = 1:1:N;
+
+	pmf = (ranks.^(-expn))/sum(ranks.^(-expn));
+
+	samples = rand(1,M);
+
+	p = cumsum(pmf(:));
+
+	[~,x] = histc(samples,[0;p/p(end)]);
+
+end
+    
+ function [ Tensor_size,Tensor_subs,Tensor_vals,J,T,K,U_groundtruth,D,O ] = parameters_input( N,T,K,D,O )
+	% the parameters for generate synthetic datasets
+	% N is the size
+	% T is the number of types
+	% K is the clusters number
+	% D is the desity
+	% J is the number of nonzero elements in tensor
+	% O is the overlapping or not, 1 or 0
+
+	 Tensor_size = N;
+	 J = 1;
+	 U_groundtruth = {};
+	 for i=1:T
+		 ui = zeros(Tensor_size(i),K);
+		 U_groundtruth{1,i} = ui;
+		 J = J*N(i);
+		 clear ui;
+	 end
+	 
+	 J = ceil(J*D);
+	 Tensor_subs = zeros(J,T);
+	 Tensor_vals = ones(J,1);
+	 
+end
+
+ 
+        
